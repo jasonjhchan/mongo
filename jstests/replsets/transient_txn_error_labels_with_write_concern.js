@@ -103,7 +103,7 @@
 
     runNoSuchTransactionTests({coordinateCommitTransaction: 1, participants: []},
                               "coordinateCommitTransaction");
-
+    rst.awaitReplication();
     session.endSession();
 
     st.stop();
